@@ -3,37 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi App de Java Docker</title>
+    <title>Series y Películas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a mi app Java Docker</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Menú -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="#">Películas</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Esto es un ejemplo de una app Dockerizada con Java y Spark.</p>
-        </section>
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Mis Series y Películas</h1>
 
-        <section id="caracteristicas">
-            <h2>Características</h2>
-            <p>Lista de las características principales de la app.</p>
-        </section>
+        <div class="card-container">
+            <!-- Tarjeta de Serie: Los Renglones Torcidos de Dios -->
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61hb9qK9xDL._AC_SY679_.jpg" alt="Los Renglones Torcidos de Dios">
+                <div class="card-content">
+                    <h2>Los Renglones Torcidos de Dios</h2>
+                    <p>Un thriller psicológico basado en la novela de Torcuato Luca de Tena. La historia sigue a Alice Gould, una mujer que es ingresada en un hospital psiquiátrico, pero ¿es realmente una enferma mental o está allí para resolver un misterio?</p>
+                </div>
+            </div>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <button id="contactBtn">Enviar mensaje</button>
-        </section>
-    </main>
+            <!-- Tarjeta de Serie: The 100 -->
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/71K9xoqt+dL._AC_SY679_.jpg" alt="The 100">
+                <div class="card-content">
+                    <h2>The 100</h2>
+                    <p>Un grupo de jóvenes se enfrenta a un mundo post-apocalíptico. Tras la destrucción de la Tierra, los sobrevivientes luchan por recuperar el planeta. Basada en la famosa saga de libros.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Serie: Juego de Tronos -->
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/91hfWbbfRsL._AC_SY679_.jpg" alt="Juego de Tronos">
+                <div class="card-content">
+                    <h2>Juego de Tronos</h2>
+                    <p>La lucha por el Trono de Hierro ha comenzado en Westeros. Nobles, dragones y luchas sangrientas marcarán la historia en esta épica serie basada en los libros de George R. R. Martin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Para más información sobre nuestras series y películas, contáctanos al 800-123-4567</p>
+            <p>© 2025 Series y Películas</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
