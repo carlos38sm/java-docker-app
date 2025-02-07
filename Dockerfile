@@ -8,10 +8,7 @@ WORKDIR /app
 COPY src /app/src
 
 # Crea el directorio para las librerías y descarga las dependencias necesarias:
-# - Spark Java (spark-core)
-# - SLF4J (API y la implementación simple)
-# - API de Servlet (javax.servlet)
-# - Jetty Server (necesario para Spark)
+# Spark Java (spark-core), SLF4J, API de Servlet, Jetty
 RUN mkdir -p /app/lib && \
     curl -o /app/lib/spark-core.jar https://repo1.maven.org/maven2/com/sparkjava/spark-core/2.9.4/spark-core-2.9.4.jar && \
     curl -o /app/lib/slf4j-api.jar https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar && \
@@ -26,6 +23,10 @@ RUN mkdir -p /app/lib && \
 # Crea el directorio para las clases compiladas y compila el código
 RUN mkdir -p /app/bin && \
     javac -cp "/app/lib/*" -d /app/bin /app/src/Main.java
+
+# Copia los archivos de frontend al contenedor
+COPY frontend /app/frontend  
+# Aquí es donde copiamos la carpeta frontend al contenedor
 
 # Cambia al directorio de las clases compiladas
 WORKDIR /app/bin
